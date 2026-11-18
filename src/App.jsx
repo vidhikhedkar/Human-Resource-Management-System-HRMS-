@@ -9,6 +9,7 @@ import Attendance from "./pages/Attendance";
 import Leaves from "./pages/Leaves";
 import Payroll from "./pages/Payroll";
 import Layout from "./components/Layout";
+import ScrollToTop from "./pages/ScrollToTop";
 
 function ProtectedRoute({ children, adminOnly = false }) {
   const [user, setUser] = useState(null);
@@ -59,6 +60,7 @@ function ProtectedRoute({ children, adminOnly = false }) {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
